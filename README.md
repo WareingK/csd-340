@@ -1,2 +1,4 @@
-# csd-340
-Web Dev and HTML
+# CSD 340 Web Development with HTML and CSS
+## Contributors
+....*Sue Sampson
+....*Kristian Wareing
