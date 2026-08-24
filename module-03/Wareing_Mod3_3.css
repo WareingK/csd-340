@@ -1,0 +1,63 @@
+/*
+    Kristian Wareing
+    August 23, 2026
+    CSD 340 - Assignment 3.3 - Build a Web Page Exercise, Part 3
+*/
+
+body {
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Oswald', Arial, sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 500;
+}
+
+ol {
+    font-weight: 300;
+    list-style-position: outside;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+#books,
+#learned {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+}
+
+#books {
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+#learned {
+    border: 1px dashed red;
+    border-radius: 15px;
+}
+
+#learned ol {
+    list-style-type: upper-roman;
+}
+
+#footer {
+    width: 100%;
+    margin-top: 60%;
+    margin-bottom: 20px;
+    float: right;
+}
+
+#footer a {
+    float: right;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
