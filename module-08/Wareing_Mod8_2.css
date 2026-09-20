@@ -1,0 +1,129 @@
+/*
+    Name:       Kristian Wareing
+    Date:       September 20, 2026
+    Assignment: 8.2 - Build a Web Page, Part 6
+*/
+
+/* Page defaults. */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Banner across the top of the page. */
+header {
+    background-color: #4F3674;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+/* Navigation bar. Hidden overflow contains the floated anchors so the bar
+   keeps the height of its contents. */
+#navbar {
+    overflow: hidden;
+    background-color: #3B2856;
+    border-bottom: 15px solid #D6A800;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #D6A800;
+    color: #3B2856;
+}
+
+/* Content area between the navigation bar and the footer. The 100px bottom
+   margin reserves room for the fixed footer so it never covers the cards. */
+#container {
+    margin: 2% 5% 100px;
+    padding: 10px;
+}
+
+/* Card panel. The transition animates the shadow change on hover. */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: #4F3674;
+    font-weight: 400;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+/* Movies table. Collapsing the borders removes the doubled lines between
+   adjacent cells so each divider reads as a single rule. */
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#movies th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4F3674;
+    color: white;
+    padding-left: 8px;
+}
+
+#movies td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Footer fixed to the bottom of the viewport. */
+footer {
+    background-color: #4F3674;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+/* Copyright line pulled to the opposite side of the footer. */
+footer p.copyright {
+    float: left;
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
