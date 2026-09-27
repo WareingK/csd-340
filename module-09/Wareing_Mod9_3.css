@@ -1,0 +1,91 @@
+/*
+    Kristian Wareing
+    September 27, 2026
+    CSD 340 Web Development with HTML and CSS
+    Assignment 9.3 - JavaScript Exercise, Part 1
+*/
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'Lora', Georgia, serif;
+}
+
+#container {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 500;
+    text-align: left;
+    padding-top: 15px;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+.intro {
+    text-indent: 2em;
+}
+
+.sentence {
+    font-style: italic;
+}
+
+/* Blanks filled in by JavaScript */
+.blank {
+    font-weight: 700;
+    color: #4F3674;
+}
+
+.buttons {
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.buttons button {
+    font-family: inherit;
+    font-size: 1em;
+    margin: 0.25em;
+    padding: 0.5em 1em;
+    color: #FFFFFF;
+    background-color: #4F3674;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #D6A800;
+    color: #000000;
+}
+
+address {
+    text-align: center;
+}
+
+address a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none;
+}
+
+address a:visited {
+    color: #7A5CA8;
+}
+
+address a:hover {
+    text-decoration: underline;
+    background-color: #D6A800;
+}
