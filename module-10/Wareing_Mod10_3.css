@@ -1,0 +1,80 @@
+/*
+    Kristian Wareing
+    October 3, 2026
+    CSD 340 Web Development with HTML and CSS
+    Assignment 10.3 - JavaScript Exercise, Part 2
+*/
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#container {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.choices img {
+    width: 100px;
+    height: 100px;
+    margin: 0 0.75em;
+    cursor: pointer;
+    border-radius: 50%;
+    filter: grayscale(1);
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.instructions {
+    cursor: default;
+}
+
+.choices img:hover {
+    transform: scale(1.1);
+}
+
+#display {
+    margin-top: 2em;
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+#sceneImage {
+    width: 220px;
+    height: 220px;
+}
+
+/* Scene themes, switched by changeSky() through the body class */
+.day {
+    background-color: #CDEBFF;
+    color: #1F3A52;
+}
+
+.day #display {
+    background-color: #FFFFFF;
+}
+
+.night {
+    background-color: #0E1229;
+    color: #E8E6D9;
+}
+
+.night #display {
+    background-color: #1B2140;
+}
+
+.storm {
+    background-color: #6E7887;
+    color: #FFFFFF;
+}
+
+.storm #display {
+    background-color: #4A5361;
+}

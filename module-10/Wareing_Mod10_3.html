@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+    Kristian Wareing
+    October 3, 2026
+    CSD 340 Web Development with HTML and CSS
+    Assignment 10.3 - JavaScript Exercise, Part 2
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A page that changes its theme when the user clicks an image, written for CSD 340 Assignment 10.3.">
+    <meta name="author" content="Kristian Wareing">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Wareing_Mod10_3.css">
+</head>
+
+<body class="day">
+    <div id="container">
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+        <!-- Instruction text turns red while the mouse is over it -->
+        <p class="instructions"
+           onmouseover="this.style.color='#FF4D4D';"
+           onmouseout="this.style.color='';">
+            Run your mouse over a picture to bring it to life, then click it to change the sky.
+        </p>
+
+        <!-- Each image shows in full color on mouseover and calls changeSky()
+             with its own scene name when clicked -->
+        <div class="choices">
+            <img src="images/sun.svg" alt="Sun"
+                 onmouseover="this.style.filter='none';"
+                 onmouseout="this.style.filter='';"
+                 onclick="changeSky('day')">
+            <img src="images/moon.svg" alt="Moon"
+                 onmouseover="this.style.filter='none';"
+                 onmouseout="this.style.filter='';"
+                 onclick="changeSky('night')">
+            <img src="images/storm.svg" alt="Storm cloud"
+                 onmouseover="this.style.filter='none';"
+                 onmouseout="this.style.filter='';"
+                 onclick="changeSky('storm')">
+        </div>
+
+        <div id="display">
+            <img id="sceneImage" src="images/sun.svg" alt="Sun">
+            <h2 id="sceneTitle">Clear Day</h2>
+            <p id="sceneText">Bright skies and plenty of sunshine. A good day to be outside.</p>
+        </div>
+    </div>
+
+    <script>
+        // Text and image for each scene, looked up by the name passed from onclick
+        const scenes = {
+            day: {
+                image: "images/sun.svg",
+                alt: "Sun",
+                title: "Clear Day",
+                text: "Bright skies and plenty of sunshine. A good day to be outside."
+            },
+            night: {
+                image: "images/moon.svg",
+                alt: "Moon",
+                title: "Starry Night",
+                text: "The sun is down and the stars are out. Time to slow down for the evening."
+            },
+            storm: {
+                image: "images/storm.svg",
+                alt: "Storm cloud",
+                title: "Thunderstorm",
+                text: "Dark clouds, heavy rain, and lightning. Probably best to stay inside."
+            }
+        };
+
+        // Runs when an image is clicked: updates the display and the page colors
+        function changeSky(sceneName) {
+            const scene = scenes[sceneName];
+
+            document.getElementById("sceneImage").src = scene.image;
+            document.getElementById("sceneImage").alt = scene.alt;
+            document.getElementById("sceneTitle").textContent = scene.title;
+            document.getElementById("sceneText").textContent = scene.text;
+
+            // The body class controls the background and text colors in the CSS
+            document.body.className = sceneName;
+        }
+    </script>
+</body>
+
+</html>
